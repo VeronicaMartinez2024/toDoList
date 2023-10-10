@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo list</title>
+    <title>Lista de Tareas</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
-
 <body class="bg-gray-100">
-    <div class="container mx-auto p-4">
-        <h1 class="text-3xl font-semibold mb-4">To Do List</h1>
-        <hr>
-        <form id="task-form" class="mb-4">
-            <div class="mb-2">
-                <input type="text" id="task-title" placeholder="Task title" required
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500">
+    <div class= "container mx-auto p-4">
+        <h1 class="text-2xl font-semibold mb-4">Lista de Tareas</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-1">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-lg font-semibold mb-2">Pendientes</h2>
+                    <ul id="todoList" class="space-y-2">
+                        <!-- Tareas pendientes se mostrarán aquí -->
+                    </ul>
+                </div>
             </div>
-
-            <div class="mb-2">
-                <textarea id="task-description" placeholder="Task description"
-                    class="w-full px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500"></textarea>
+            <div class="col-span-1">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-lg font-semibold mb-2">En Proceso</h2>
+                    <ul id="inProgressList" class="space-y-2">
+                        <!-- Tareas en proceso se mostrarán aquí -->
+                    </ul>
+                </div>
             </div>
-            <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600">Add
-                Task</button>
-        </form>
-        <ul id="task-list" class="space-y-4"></ul>
+            <div class="col-span-1">
+                <div class="bg-white p-4 rounded shadow">
+                    <h2 class="text-lg font-semibold mb-2">Hechas</h2>
+                    <ul id="doneList" class="space-y-2">
+                        <!-- Tareas hechas se mostrarán aquí -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mt-4">
+            <h2 class="text-lg font-semibold mb-2">Agregar Tarea</h2>
+            <input type="text" id="taskName" class="w-full px-4 py-2 mb-2 rounded border" placeholder="Nombre de la tarea">
+            <textarea id="taskDescription" class="w-full px-4 py-2 mb-2 rounded border" placeholder="Descripción de la tarea"></textarea>
+            <input type="datetime-local" id="startTime" class="w-full px-4 py-2 mb-2 rounded border" placeholder="Hora de inicio">
+            <input type="datetime-local" id="endTime" class="w-full px-4 py-2 mb-2 rounded border" placeholder="Hora de finalización">
+            <select id="taskStatus" class="w-full px-4 py-2 mb-2 rounded border">
+                <option value="pendiente">Pendiente</option>
+                <option value="enProceso">En Proceso</option>
+                <option value="hecha">Hecha</option>
+            </select>
+            <button id="addTaskButton" class="px-4 py-2 bg-blue-500 text-white rounded">Agregar</button>
+        </div>
+        <div>
+        <h3 class="text-4xl font-semibold italic">¡Métodos de estudio que te pueden interesar!</h3>
+        <p>Cumple los plazos que te propones</p>
+        </div>
     </div>
-    <script src="main.js"></script>
-</body>
+    <script src="Task.js"></script>
+    <script src="Sugerencias.js"></script>
 
+</body>
 </html>
