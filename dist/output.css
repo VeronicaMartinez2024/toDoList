@@ -619,9 +619,8 @@ video {
   border-width: 1px;
 }
 
-.bg-cafeOscuro {
-  --tw-bg-opacity: 1;
-  background-color: rgb(86 43 5 / var(--tw-bg-opacity));
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
@@ -648,12 +647,17 @@ video {
   line-height: 1.75rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
-.font-black {
-  font-weight: 900;
+.italic {
+  font-style: italic;
 }
 
 .shadow {

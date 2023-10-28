@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tareas</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-</head>
+    <style>
+        [draggable="true"] {
+            cursor: grab;
+        }
+        [draggable="true"]:active {
+            opacity: 0.5;
+        }
+    </style>
+</head> 
 <body class="bg-gray-100">
-    <div class= "container mx-auto p-4">
+    <div class="container mx-auto p-4">
         <h1 class="text-2xl font-semibold mb-4">Lista de Tareas</h1>
+
         <div class="grid grid-cols-3 gap-4">
+            
             <div class="col-span-1">
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="text-lg font-semibold mb-2">Pendientes</h2>
-                    <ul id="todoList" class="space-y-2">
+                    <ul id="pendienteList" class="space-y-2">
                         <!-- Tareas pendientes se mostrarán aquí -->
                     </ul>
                 </div>
@@ -21,7 +31,7 @@
             <div class="col-span-1">
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="text-lg font-semibold mb-2">En Proceso</h2>
-                    <ul id="inProgressList" class="space-y-2">
+                    <ul id="enProcesoList" class="space-y-2">
                         <!-- Tareas en proceso se mostrarán aquí -->
                     </ul>
                 </div>
@@ -29,7 +39,7 @@
             <div class="col-span-1">
                 <div class="bg-white p-4 rounded shadow">
                     <h2 class="text-lg font-semibold mb-2">Hechas</h2>
-                    <ul id="doneList" class="space-y-2">
+                    <ul id="hechaList" class="space-y-2">
                         <!-- Tareas hechas se mostrarán aquí -->
                     </ul>
                 </div>
@@ -48,13 +58,39 @@
             </select>
             <button id="addTaskButton" class="px-4 py-2 bg-blue-500 text-white rounded">Agregar</button>
         </div>
-        <div>
-        <h3 class="text-4xl font-semibold italic">¡Métodos de estudio que te pueden interesar!</h3>
-        <p>Cumple los plazos que te propones</p>
-        </div>
+    </div>
+
+    <div>
+        <center>
+            <p>A continuación algunas recomendaciones de métodos de estudios para ser más efectivo ^^</p>
+            <table border="1">
+                <td colspan="4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wC2hwcZn5ds?si=ysJTtjMEad9GaKUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </td>
+            </table>
+        </center>
+        <center>
+            <table border="1">
+                <td colspan="4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/_HmFAEPeBCs?si=fWycIUJl3A5DH_Vn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </td>
+            </table>
+        </center>
+        <center>
+            <table border="1">
+                <td colspan="4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iTquug-8urc?si=tQKW5OJxW__XWkpF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </td>
+            </table>
+        </center>
+        <center>
+            <table border="1">
+                <td colspan="4">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wfJK4hOF6cw?si=kdx0qbe1MHgqaKlk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </td>
+            </table>
+        </center>
     </div>
     <script src="Task.js"></script>
-    <script src="Sugerencias.js"></script>
-
 </body>
 </html>
